@@ -1,0 +1,12 @@
+Flask==0.12.2
+mkdocs==0.17.3
+modgrammar==0.10
+pg8000==1.11.0
+pytest==3.4.2
+pytest-cov==2.5.1
+pytest-html==1.17.0
+simplejson==3.13.2
+tqdm==4.21.0
+Werkzeug==0.12.2
+requests==2.18.4
+argparse==1.4.0

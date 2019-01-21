@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<!--
+@author Gian-Luca Frei & Fedor Gamper
+ @date 30.05.2018
+ @project StockSearch
+
+This is the only HTML file for stocksearch. The file depends on the Javascript files
+main, results and easyMode.
+
+Further there are external Javascript libraryes to handle speciffic tasks. Those are 
+Bootsrap, JQuery, Jalc and tablesorter.
+
+The bootsrap file is modified by the custum.css file.
+
+-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>StockSearch</title>
+
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CND -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap JS and JQuery https://jquery.org/license/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Tablesorter http://tablesorter.com -->
+    <script type="text/javascript" src="/static/tablesorter/tablesorter.js"></script>
+
+    <!-- Cache by jalc todo license = apache License-->
+    <script type="text/javascript" src="/static/jalc/jalc.min.js"></script>
+
+    <!-- Chart.js -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="/static/easyMode.js"></script>
+    <script type="text/javascript" src="/static/results.js"></script>
+    <script type="text/javascript" src="/static/main.js"></script>
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="/static/custom.css"/>
+
+</head>
+<body>
+<!-- Menu -->
+<nav class="navbar navbar-expand navbar-light">
+    <ul class="navbar-nav ml-auto" id="menu">
+        <li class="nav-item">
+            <a class="nav-link " id="mode" href="javascript:void(0)" onclick="changeMode()">EASY MODE</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link " id="helpLink" href="/static/site/tutorials/">HELP</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- Search Box-->
+<div class="container-fluid">
+    <div class="jumbotron shadow mx-auto w-85 r-12 p-40">
+        <img class="mx-auto d-block w-50" src="/static/logo.svg" alt="stocksearch logo">
+
+        <!-- Advanced Mode-->
+        <div class="input-group mt-4 mb-3" id="advancedMode">
+            <input class="form-control" id="query" type="text" placeholder="Query" aria-label="Query"
+                   aria-describedby="basic-addon2" value="{% if tryit %}{{tryit}}{% endif %}" required/>
+            <div class="input-group-append">
+                <button class="btn color-green search" id="AdvancedSearchButton" type="button" onclick="getAdvancedResults()">Search
+                    <img class="loadingAnimation" src='/static/loading.gif' alt='loading' style=' height: 20px; display: none'></button>
+            </div>
+        </div>
+
+        <!-- Easy Mode-->
+        <div class="container mt-4 mb-3 p-0" id="easyMode" style="display: none">
+
+            <div class=" text-center">
+                <button class="btn btn-secondary m-2" onclick="addValueFilter()">Value</button>
+                <button class="btn btn-secondary m-2" onclick="addChangeFilter()">Change</button>
+                <button class="btn btn-secondary m-2" onclick="addLongestGrowFilter()">Longest Grow</button>
+                <button class="btn btn-secondary m-2" onclick="addVarianceFilter()">Variance</button>
+                <button class="btn btn-secondary m-2" onclick="addAverageFilter()">Average</button>
+            </div>
+
+            <div class="modal fade" id="modal" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content" id="filterModal">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row mt-3 mb-3" id="ssql">
+                <div class="p-2">ALL SHARES</div>
+                <div class="right">
+                    <button class="btn color-green search" id="easySearchButton" type="button" onclick="getEasyResults()">
+                        Search
+                        <img class="loadingAnimation" src='/static/loading.gif' alt='loading' style=' height: 20px; display: none'>
+                    </button></div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <!-- results -->
+    <div class="jumbotron shadow mx-auto w-85 r-12 p-40" id="results" style="display: none">
+        <!-- dinamicly filled by js -->
+    </div>
+
+</div>
+
+
+</body>
+</html>

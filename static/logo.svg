@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="408px" height="106px" viewBox="0 0 408 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <text id="Stock-Search" font-family="Avenir-Book, Avenir" font-size="72" font-weight="normal" fill="#000000">
+            <tspan x="0.084" y="85">Stock Search</tspan>
+        </text>
+        <polygon id="Triangle" fill="#62A910" transform="translate(333.622203, 6.544069) rotate(81.000000) translate(-333.622203, -6.544069) " points="333.622203 -3.95593139 341.622203 17.0440686 325.622203 17.0440686"></polygon>
+        <polyline id="Path-2" stroke="#62A910" stroke-width="4" points="67.9807177 102.329942 183.516959 92.4275989 194.713146 27.8833 323.721143 7.88264241"></polyline>
+    </g>
+</svg>

@@ -1,0 +1,4 @@
+site_name: StockSearch Dokumentation
+repo_url: https://gitlab.ti.bfh.ch/freig3/project1-stocksanalytics
+site_dir: static/site
+extra_css: [extra.css]

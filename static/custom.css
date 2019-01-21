@@ -1,0 +1,115 @@
+/*
+* Custom css in addition to bootsrap for stocksearch
+* @author Gian-Luca Frei & Fedor Gamper
+* @date 30.05.2018
+* @project StockSearch
+*/
+ul#menu li a.nav-link{
+    color: #62A910;
+}
+
+div.jumbotron.w-85{
+     width: 85%;
+ }
+
+div.jumbotron.p-40{
+    padding: 40px;
+}
+
+div.r-8{
+    border-radius: 8px;
+}
+
+
+
+div.shadow{
+  box-shadow: 0 0 1px 0 #CCC, 0 0 10px #CCC;
+}
+
+button.color-green{
+    background-color: #62A910;
+}
+thead.background-green{
+    background-color: #62A910;
+}
+
+hr{
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+h5.gray{
+    color: #878787;
+}
+
+div.filter{
+    background-color: lightgray;
+    border-radius: 8px;
+    padding-top: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+div#ssql{
+    background: #fff;
+    padding: 4px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    box-shadow: 0 0 1px 0 #CCC, 0 0 10px #CCC;
+}
+
+#concat select{
+    height: 100% !important;
+}
+div #concat{
+    padding-right: 8px;
+    padding-left: 8px;
+}
+div button.close{
+    margin-top: -2px;
+    padding-left: 4px;
+}
+
+#tableDiv{
+    display:flex;
+}
+div.right{
+    margin-right: -4px;
+    margin-top: -4px;
+    margin-bottom: -4px;
+    margin-left:auto;
+    height: auto;
+    padding-left: 8px;
+}
+button#easySearchButton{
+    height: 100%;
+    border-radius: .25rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+th.headerSortUp {
+    background-image: url(tablesorter/sort-ascending.gif) !important;
+    background-color: #57871c !important;
+
+}
+th.headerSortDown {
+    background-image: url(tablesorter/sort-descending.gif) !important;
+    background-color: #57871c !important;
+}
+th.header {
+    font-weight: bold;
+    background-color: #62A910;
+    background-image: url(tablesorter/sort-ascDesc.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+table.borderless td, table.borderless th {
+    border: none !important;
+}
+table.table-striped>tbody>tr:nth-child(even)>td,
+table.table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #c9c9c9;
+}
+
