@@ -1,6 +1,6 @@
 ### Prerequisites
 
-Follow the instructions from https://gitlab.ti.bfh.ch/freig3/project1-stocksanalytics/blob/develop/docs/Setup.md
+Follow the instructions from /docs/Setup.md
 
 ### How to run the test
 
